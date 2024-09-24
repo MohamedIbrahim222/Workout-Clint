@@ -4,6 +4,7 @@ import { WorkoutStatsComponent } from './workout-stats/workout-statscomponent';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AuthGuard } from './auth/auth.guard';
 
 export const routes: Routes = [
     {
@@ -20,11 +21,13 @@ export const routes: Routes = [
     },
     {
         path: 'dashboard',
-        component: WorkoutStatsComponent
+        component: WorkoutStatsComponent,
+        canActivate: [AuthGuard]
     },
     {
         path: 'workouts',
-        component: WorkoutListComponent
+        component: WorkoutListComponent,
+        canActivate: [AuthGuard]
     },
     {
         path: '404',

@@ -25,6 +25,7 @@ export class NotFoundComponent {
   constructor(private authService: AuthService) {}
 
   get isLoggedIn(): boolean {
-    return this.authService.isLoggedIn();
+    const token = localStorage.getItem('token');
+    return !!token; 
   }
 }
