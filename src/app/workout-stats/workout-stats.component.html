@@ -1,0 +1,50 @@
+<div *ngIf="stats" class="bg-white p-6 rounded-lg shadow-md mb-4">
+  <h2 class="text-2xl font-bold mb-6 text-center">Workout Statistics</h2>
+  <div class="grid grid-cols-2 gap-6">
+    <div class="bg-blue-100 p-6 rounded-lg shadow-md flex flex-col items-center">
+      <div class="flex items-center mb-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+        <p class="text-xl font-semibold text-blue-600">Total Workouts</p>
+      </div>
+      <p class="text-4xl font-bold">{{ stats.totalWorkouts }}</p>
+    </div>
+    <div class="bg-blue-100 p-6 rounded-lg shadow-md flex flex-col items-center">
+      <div class="flex items-center mb-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <p class="text-xl font-semibold text-blue-600">Completed Workouts</p>
+      </div>
+      <p class="text-4xl font-bold">{{ stats.completedWorkouts }}</p>
+    </div>
+    <div class="bg-blue-100 p-6 rounded-lg shadow-md flex flex-col items-center">
+      <div class="flex items-center mb-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <p class="text-xl font-semibold text-blue-600">Pending Workouts</p>
+      </div>
+      <p class="text-4xl font-bold">{{ stats.pendingWorkouts }}</p>
+    </div>
+    <div class="bg-blue-100 p-6 rounded-lg shadow-md flex flex-col items-center">
+      <div class="flex items-center mb-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <p class="text-xl font-semibold text-blue-600">Average Duration</p>
+      </div>
+      <p class="text-4xl font-bold">{{ stats.averageDuration }}<span class="text-2xl font-semibold ml-1">min</span></p>
+    </div>
+    <div class="bg-blue-100 p-6 rounded-lg shadow-md col-span-2 flex flex-col items-center">
+      <div class="flex items-center mb-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0 2v2m0-6v6m0 0a2 2 0 110 4m-2-4h4" />
+        </svg>
+        <p class="text-xl font-semibold text-blue-600">Total Duration</p>
+      </div>
+      <p class="text-4xl font-bold">{{ stats.totalDuration }}<span class="text-2xl font-semibold ml-1">min</span></p>
+    </div>
+  </div>
+</div>
